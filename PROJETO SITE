@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Interativa - Professores</title>
+    <style>
+        /* Reset de Estilos Basicos */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            padding: 50px 20px;
+            color: #1e293b;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        /* ==================================================================
+           Container Principal da Galeria (Layout Masonry estilo Pinterest)
+           ------------------------------------------------------------------
+           Em vez de CSS Grid (que forca todos os cards de uma mesma linha a
+           compartilharem a mesma altura), usamos CSS Multi-Column Layout.
+           Cada card flui de forma independente dentro da sua coluna, entao
+           quando um card expande, apenas a coluna dele é afetada — os
+           demais cards permanecem exatamente do tamanho que já estavam.
+           ================================================================== */
+        .galeria {
+            max-width: 1200px;
+            margin: 0 auto;
+            column-width: 320px;
+            column-gap: 30px;
+        }
+
+        /* Card do Professor (agora um <div> clicavel controlado via JS) */
+        .professor-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(30, 58, 138, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: column;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+
+            /* Essencial para o masonry: cada card fica inteiro em uma
+               coluna, sem ser cortado ao meio entre uma coluna e outra */
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        /* Efeito Hover nos Cards */
+        .professor-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(30, 58, 138, 0.15);
+            border-color: #bfdbfe;
+        }
+
+        /* Foco pelo teclado (acessibilidade) */
+        .professor-card:focus-visible {
+            outline: 3px solid #3b82f6;
+            outline-offset: 2px;
+        }
+
+        /* Área da Imagem */
+        .foto-container {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            position: relative;
+            background-color: #dbeafe;
+        }
+
+        .foto-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .professor-card:hover .foto-container img {
+            transform: scale(1.06);
+        }
+
+        /* Tag Indicadora de Acao */
+        .tag-clique {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background-color: rgba(30, 58, 138, 0.85);
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+        }
+
+        .professor-card:hover .tag-clique {
+            background-color: #2563eb;
+        }
+
+        /* Cabecalho de informacoes fixas do Card */
+        .card-info-basica {
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .nome {
+            color: #1e3a8a;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .area {
+            display: inline-block;
+            background-color: #eff6ff;
+            color: #2563eb;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Area Oculta do Conteudo Expandido */
+        .card-detalhes {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #f8fafc;
+            border-top: 0 solid #e2e8f0;
+            opacity: 0;
+        }
+
+        .texto-descricao {
+            padding: 20px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #475569;
+            text-align: justify;
+        }
+
+        /* ==================================================================
+           Estado Aberto (antes controlado por ":checked", agora pela
+           classe ".aberto" aplicada via JavaScript)
+           ================================================================== */
+        .professor-card.aberto {
+            border-color: #3b82f6;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+        }
+
+        .professor-card.aberto .card-detalhes {
+            /* max-height é definido dinamicamente via JS (scrollHeight)
+               para uma animação suave que se ajusta ao texto */
+            border-top-width: 1px;
+            opacity: 1;
+        }
+
+        .professor-card.aberto .tag-clique {
+            background-color: #10b981;
+        }
+
+        /* ==================================================================
+           Responsividade
+           ================================================================== */
+        @media (max-width: 480px) {
+            body {
+                padding: 30px 15px;
+            }
+
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .galeria {
+                column-width: 100%;
+                column-gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nossa Equipe de Docentes</h1>
+    <p class="subtitulo">Clique em qualquer card para conhecer os detalhes e a área de atuação de cada profissional.</p>
+
+    <!-- Os cards dos professores são gerados dinamicamente pelo script
+         no final da página, a partir do array "professores". Para
+         adicionar um novo professor, basta editar esse array. -->
+    <div class="galeria" id="galeria"></div>
+
+    <script>
+        /* ==============================================================
+           Dados dos Professores
+           --------------------------------------------------------------
+           Para adicionar um novo professor no futuro, basta acrescentar
+           um novo objeto neste array — não é necessário copiar nenhum
+           bloco de HTML.
+           ============================================================== */
+        const professores = [
+            {
+                nome: "Dr. Carlos Silva",
+                area: "Ciências e Biologia",
+                foto: "download.jpeg",
+                alt: "Dr. Carlos Silva",
+                descricao: "O Dr. Carlos é especialista em ecologia marinha e leciona há mais de 10 anos, sempre trazendo experimentos práticos e dinâmicos para a sala de aula."
+            },
+            {
+                nome: "Profa. Mariana Costa",
+                area: "Matemática",
+                foto: "https://picsum.photos",
+                alt: "Profa. Mariana Costa",
+                descricao: "Mariana transforma fórmulas complexas em desafios divertidos. Sua especialidade é matemática aplicada e raciocínio lógico avançado."
+            },
+            {
+                nome: "Prof. Roberto Souza",
+                area: "História e Sociologia",
+                foto: "https://picsum.photos",
+                alt: "Prof. Roberto Souza",
+                descricao: "Roberto conecta os eventos do passado com a geopolítica moderna, estimulando o pensamento crítico e debates enriquecedores em suas aulas."
+            },
+            {
+                nome: "Profa. Ana Beatriz",
+                area: "Literatura e Idiomas",
+                foto: "https://picsum.photos",
+                alt: "Profa. Ana Beatriz",
+                descricao: "Apaixonada por escrita criativa, Ana guia os alunos pelo universo da literatura clássica e contemporânea, além de coordenar o clube de leitura."
+            },
+            {
+                nome: "Prof. Ricardo Alves",
+                area: "Física e Robótica",
+                foto: "https://picsum.photos",
+                alt: "Prof. Ricardo Alves",
+                descricao: "Ricardo comanda o laboratório de tecnologia. Ele ensina os princípios da física através da montagem de robôs e automação industrial."
+            },
+            {
+                nome: "Profa. Juliana Reis",
+                area: "Geografia e Climatologia",
+                foto: "https://picsum.photos",
+                alt: "Profa. Juliana Reis",
+                descricao: "Juliana explora o mapeamento digital e as mudanças climáticas globais, levando os estudantes a entenderem o impacto humano no planeta."
+            }
+        ];
+
+        /* ==============================================================
+           Criação dos Cards
+           ============================================================== */
+
+        function criarCardProfessor(professor) {
+            const card = document.createElement("div");
+            card.className = "professor-card";
+            card.tabIndex = 0;
+            card.setAttribute("role", "button");
+            card.setAttribute("aria-expanded", "false");
+
+            card.innerHTML = `
+                <div class="foto-container">
+                    <img src="${professor.foto}" alt="${professor.alt}">
+                    <span class="tag-clique">Ver Detalhes</span>
+                </div>
+                <div class="card-info-basica">
+                    <h2 class="nome">${professor.nome}</h2>
+                    <span class="area">${professor.area}</span>
+                </div>
+                <div class="card-detalhes">
+                    <p class="texto-descricao">${professor.descricao}</p>
+                </div>
+            `;
+
+            return card;
+        }
+
+        function renderizarGaleria() {
+            const galeria = document.getElementById("galeria");
+            const fragmento = document.createDocumentFragment();
+
+            professores.forEach((professor) => {
+                fragmento.appendChild(criarCardProfessor(professor));
+            });
+
+            galeria.appendChild(fragmento);
+        }
+
+        /* ==============================================================
+           Abrir / Fechar Cards
+           --------------------------------------------------------------
+           Apenas um card pode ficar aberto por vez. A altura do
+           conteúdo expandido é calculada dinamicamente (scrollHeight)
+           para que a animação via "max-height" fique suave, qualquer
+           que seja o tamanho do texto.
+           ============================================================== */
+
+        let cardAberto = null;
+
+        function fecharCard(card) {
+            const detalhes = card.querySelector(".card-detalhes");
+            detalhes.style.maxHeight = null;
+            card.classList.remove("aberto");
+            card.setAttribute("aria-expanded", "false");
+            if (cardAberto === card) {
+                cardAberto = null;
+            }
+        }
+
+        function abrirCard(card) {
+            const detalhes = card.querySelector(".card-detalhes");
+            card.classList.add("aberto");
+            card.setAttribute("aria-expanded", "true");
+            detalhes.style.maxHeight = detalhes.scrollHeight + "px";
+            cardAberto = card;
+        }
+
+        function alternarCard(card) {
+            const jaEstavaAberto = card === cardAberto;
+
+            if (cardAberto && cardAberto !== card) {
+                fecharCard(cardAberto);
+            }
+
+            if (jaEstavaAberto) {
+                fecharCard(card);
+            } else {
+                abrirCard(card);
+            }
+        }
+
+        /* ==============================================================
+           Eventos
+           ============================================================== */
+        function inicializarEventos() {
+            const galeria = document.getElementById("galeria");
+
+            galeria.addEventListener("click", (evento) => {
+                const card = evento.target.closest(".professor-card");
+                if (card) {
+                    alternarCard(card);
+                }
+            });
+
+            galeria.addEventListener("keydown", (evento) => {
+                const card = evento.target.closest(".professor-card");
+                if (card && (evento.key === "Enter" || evento.key === " ")) {
+                    evento.preventDefault();
+                    alternarCard(card);
+                }
+            });
+
+            window.addEventListener("resize", () => {
+                if (cardAberto) {
+                    const detalhes = cardAberto.querySelector(".card-detalhes");
+                    detalhes.style.maxHeight = detalhes.scrollHeight + "px";
+                }
+            });
+        }
+
+        /* ==============================================================
+           Inicialização
+           ============================================================== */
+        document.addEventListener("DOMContentLoaded", () => {
+            renderizarGaleria();
+            inicializarEventos();
+        });
+    </script>
+
+</body>
+</html>
