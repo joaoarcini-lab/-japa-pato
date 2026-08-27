@@ -1,473 +1,342 @@
-Quero que você desenvolva um jogo COMPLETO, ORIGINAL e MUITO BEM FEITO para eu apresentar em um trabalho escolar.
-
-O jogo NÃO precisa ser educativo e NÃO precisa ter relação com escola, matérias escolares ou estudos.
-
-Quero que ele seja um jogo de verdade, divertido, visualmente bonito e com vários sistemas, como se fosse um pequeno jogo indie.
-
-REGRA MAIS IMPORTANTE
-
-Todo o jogo deve estar dentro de UM ÚNICO ARQUIVO index.html.
-
-Eu vou usar o VS Code da seguinte maneira:
-
-Criar um arquivo chamado index.html;
-Copiar o código que você fornecer;
-Colar no index.html;
-Salvar;
-Abrir no navegador.
-
-Portanto:
-
-NÃO crie style.css;
-NÃO crie script.js;
-NÃO crie outros arquivos;
-NÃO exija Node.js;
-NÃO exija npm;
-NÃO exija instalação de bibliotecas;
-NÃO exija servidor local.
-
-Coloque todo o HTML, CSS e JavaScript dentro do mesmo arquivo.
-
-O resultado precisa funcionar diretamente no navegador.
-
-PRIMEIRO: CRIE O CONCEITO
-
-Antes do código, pense em um conceito de jogo original.
-
-Você pode escolher livremente o gênero.
-
-Algumas possibilidades:
-
-aventura;
-sobrevivência;
-roguelike;
-RPG;
-plataforma;
-ação;
-exploração;
-estratégia;
-defesa;
-corrida;
-puzzle;
-dungeon crawler;
-jogo de nave;
-apocalipse;
-ficção científica;
-fantasia;
-mistério;
-terror leve;
-ou uma mistura de gêneros.
-
-Não precisa seguir essas opções. Crie algo que seja realmente interessante.
-
-Quero que o jogo tenha uma identidade própria.
-
-Crie:
-
-nome do jogo;
-história;
-protagonista;
-objetivo;
-mundo;
-inimigos;
-mecânicas;
-sistema de progressão.
-GAMEPLAY
-
-O jogo precisa ter gameplay de verdade.
-
-Não quero apenas um quiz, uma tela de perguntas ou uma demonstração.
-
-O jogador precisa ter coisas para fazer e decisões para tomar.
-
-Crie sistemas como:
-
-movimentação;
-interação;
-combate ou outra mecânica principal adequada ao gênero;
-inimigos;
-obstáculos;
-objetivos;
-recompensas;
-exploração;
-progressão;
-desafios;
-fases ou áreas diferentes.
-
-A mecânica principal precisa ser divertida e fácil de entender.
-
-PROGRESSÃO
-
-Crie um sistema de evolução.
-
-O jogador deve poder:
-
-ganhar XP;
-subir de nível;
-desbloquear habilidades;
-melhorar atributos;
-conseguir itens;
-desbloquear novas áreas;
-ficar progressivamente mais forte.
-
-Crie uma sensação clara de evolução.
-
-MOEDA E LOJA
-
-Adicione uma moeda dentro do jogo.
-
-O jogador pode ganhar moedas jogando e utilizá-las em uma loja.
-
-A loja pode oferecer:
-
-melhorias;
-skins;
-habilidades;
-itens;
-upgrades;
-bônus.
-
-Os itens comprados devem realmente afetar o gameplay quando fizer sentido.
-
-INIMIGOS
-
-Crie vários tipos de inimigos.
-
-Cada inimigo deve ter características diferentes.
-
-Por exemplo:
-
-inimigo rápido;
-inimigo resistente;
-inimigo que ataca à distância;
-inimigo que persegue o jogador;
-inimigo especial.
-
-Não faça todos os inimigos funcionarem exatamente da mesma maneira.
-
-CHEFES
-
-Inclua pelo menos 2 chefes.
-
-Cada chefe deve ter:
-
-aparência própria;
-barra de vida;
-ataques diferentes;
-padrões de comportamento;
-dificuldade maior;
-recompensa especial.
-
-O chefe final deve ser significativamente mais difícil que os inimigos normais.
-
-FASES / MUNDO
-
-Crie pelo menos 5 áreas ou fases.
-
-Cada uma deve ter uma identidade diferente.
-
-Exemplo:
-
-Área inicial;
-Floresta;
-Cidade abandonada;
-Laboratório;
-Área final.
-
-Mas escolha um tema que combine com o jogo que você criar.
-
-Cada área deve apresentar novos desafios.
-
-MENU PRINCIPAL
-
-Crie um menu principal profissional contendo:
-
-Jogar;
-Continuar;
-Novo jogo;
-Configurações;
-Conquistas;
-Como jogar;
-Créditos.
-
-Use animações e transições.
-
-SISTEMA DE PAUSA
-
-Durante o jogo, permita apertar ESC ou um botão para abrir um menu de pausa.
-
-Inclua:
-
-Continuar;
-Configurações;
-Reiniciar fase;
-Voltar ao menu.
-HUD
-
-Durante o gameplay, mostre informações importantes como:
-
-vida;
-energia;
-XP;
-nível;
-moedas;
-habilidade equipada;
-objetivo atual;
-progresso da fase.
-
-O HUD deve ser bonito e não atrapalhar a tela.
-
-CONQUISTAS
-
-Crie um sistema de conquistas.
-
-Por exemplo:
-
-Primeira vitória;
-Derrotou 10 inimigos;
-Encontrou um segredo;
-Comprou seu primeiro item;
-Derrotou um chefe;
-Completou todas as fases.
-
-As conquistas devem ser salvas.
-
-SEGREDOS
-
-Adicione pelo menos alguns elementos secretos.
-
-Pode ser:
-
-área secreta;
-item escondido;
-Easter egg;
-personagem secreto;
-código;
-evento raro.
-
-Isso deixa o jogo mais interessante.
-
-SALVAMENTO
-
-Use localStorage.
-
-Salve automaticamente:
-
-progresso;
-fase desbloqueada;
-XP;
-nível;
-moedas;
-upgrades;
-itens;
-conquistas;
-recordes.
-
-Se eu fechar o navegador e abrir novamente, o progresso deve continuar.
-
-Adicione uma opção para apagar o save.
-
-CONFIGURAÇÕES
-
-Crie uma tela de configurações contendo:
-
-volume;
-efeitos sonoros;
-música;
-qualidade gráfica;
-animações;
-dificuldade.
-
-As configurações devem funcionar de verdade.
-
-ÁUDIO
-
-Se possível, utilize Web Audio API para criar efeitos sonoros sem precisar de arquivos externos.
-
-Adicione sons para:
-
-menus;
-ataques;
-dano;
-inimigos;
-coleta de moedas;
-compra;
-level up;
-vitória;
-derrota;
-chefe.
-
-Também permita desligar os sons.
-
-VISUAL
-
-Quero um visual MUITO bonito para um projeto feito em HTML.
-
-Use bastante:
-
-CSS;
-gradientes;
-sombras;
-partículas;
-animações;
-efeitos de brilho;
-transições;
-elementos flutuantes;
-efeitos de dano;
-efeitos de impacto;
-barras animadas;
-telas de transição.
-
-Se o gênero permitir, utilize <canvas> para criar o gameplay.
-
-Pode usar JavaScript para desenhar:
-
-personagem;
-inimigos;
-cenário;
-projéteis;
-partículas;
-efeitos.
-
-Crie uma estética coerente.
-
-RESPONSIVIDADE
-
-O jogo deve funcionar em:
-
-computador;
-notebook;
-tablet;
-celular.
-
-No computador, utilize teclado e mouse.
-
-Se possível, adicione controles touch para dispositivos móveis.
-
-QUALIDADE
-
-Quero que o projeto pareça muito mais elaborado do que um simples trabalho escolar.
-
-Imagine que você está criando uma pequena versão de um jogo indie.
-
-O jogo deve ter:
-
-identidade visual;
-gameplay;
-progressão;
-desafio;
-recompensas;
-menus;
-efeitos;
-sons;
-salvamento;
-conquistas;
-chefes;
-segredos.
-
-Não faça algo propositalmente simples.
-
-CÓDIGO
-
-O código precisa ser totalmente funcional.
-
-Não quero:
-
-pseudocódigo;
-trechos incompletos;
-"adicione o restante";
-comentários dizendo para eu implementar alguma coisa;
-arquivos separados;
-código fictício.
-
-Quero o projeto inteiro pronto.
-
-Use apenas tecnologias que funcionem diretamente no navegador.
-
-Se usar bibliotecas externas, evite-as sempre que possível. Se alguma biblioteca for realmente necessária, prefira uma CDN que funcione diretamente pelo navegador e explique isso claramente.
-
-ORGANIZAÇÃO DO CÓDIGO
-
-Mesmo estando tudo em um único arquivo, organize o código internamente.
-
-Separe claramente:
-
-configuração;
-HTML;
-CSS;
-variáveis;
-estado do jogo;
-jogador;
-inimigos;
-fases;
-combate;
-itens;
-loja;
-progressão;
-áudio;
-menus;
-salvamento;
-conquistas;
-renderização;
-controles.
-
-Use comentários no código para facilitar futuras alterações.
-
-ENTREGA
-
-Sua resposta deve seguir esta ordem:
-
-1. CONCEITO
-
-Explique:
-
-nome do jogo;
-gênero;
-história;
-objetivo;
-mecânica principal;
-como funciona a progressão.
-2. COMO RODAR
-
-Explique rapidamente:
-
-Abrir o VS Code;
-Criar index.html;
-Colar o código;
-Salvar;
-Abrir no navegador.
-3. CÓDIGO COMPLETO
-
-Forneça UM ÚNICO BLOCO DE CÓDIGO HTML.
-
-O código deve começar com:
-
 <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida 🚗</title>
 
-e terminar com:
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        #game {
+            position: relative;
+            width: 400px;
+            height: 700px;
+            background: #333;
+            overflow: hidden;
+            border: 5px solid white;
+        }
+
+        /* Estrada */
+        #road {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #444;
+        }
+
+        /* Faixas da estrada */
+        .line {
+            position: absolute;
+            width: 10px;
+            height: 80px;
+            background: white;
+            left: 195px;
+        }
+
+        /* Carro do jogador */
+        #player {
+            position: absolute;
+            width: 50px;
+            height: 90px;
+            background: red;
+            bottom: 30px;
+            left: 175px;
+            border-radius: 10px;
+            border: 3px solid #111;
+        }
+
+        #player::before,
+        #player::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 25px;
+            background: black;
+            top: 10px;
+        }
+
+        #player::before {
+            left: -8px;
+        }
+
+        #player::after {
+            right: -8px;
+        }
+
+        /* Carros inimigos */
+        .enemy {
+            position: absolute;
+            width: 50px;
+            height: 90px;
+            background: blue;
+            border-radius: 10px;
+            border: 3px solid #111;
+        }
+
+        #score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        #gameOver {
+            display: none;
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            z-index: 20;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #gameOver h1 {
+            color: red;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background: #00cc66;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="game">
+
+    <div id="road"></div>
+
+    <div id="score">
+        Pontos: 0
+    </div>
+
+    <div id="player"></div>
+
+    <div id="gameOver">
+        <h1>GAME OVER</h1>
+        <p id="finalScore"></p>
+        <br>
+        <button onclick="restartGame()">Jogar novamente</button>
+    </div>
+
+</div>
+
+<script>
+    const game = document.getElementById("game");
+    const player = document.getElementById("player");
+    const scoreText = document.getElementById("score");
+    const gameOverScreen = document.getElementById("gameOver");
+    const finalScore = document.getElementById("finalScore");
+
+    let playerX = 175;
+    let enemies = [];
+    let lines = [];
+
+    let score = 0;
+    let speed = 5;
+    let gameRunning = true;
+
+    // Criar linhas da estrada
+    for (let i = 0; i < 8; i++) {
+        const line = document.createElement("div");
+
+        line.classList.add("line");
+        line.style.top = (i * 100 - 100) + "px";
+
+        game.appendChild(line);
+        lines.push(line);
+    }
+
+    // Teclas pressionadas
+    const keys = {};
+
+    document.addEventListener("keydown", function(event) {
+        keys[event.key] = true;
+    });
+
+    document.addEventListener("keyup", function(event) {
+        keys[event.key] = false;
+    });
+
+    function createEnemy() {
+        if (!gameRunning) return;
+
+        const enemy = document.createElement("div");
+
+        enemy.classList.add("enemy");
+
+        const positions = [75, 175, 275];
+
+        const randomPosition =
+            positions[Math.floor(Math.random() * positions.length)];
+
+        enemy.style.left = randomPosition + "px";
+        enemy.style.top = "-100px";
+
+        game.appendChild(enemy);
+
+        enemies.push(enemy);
+    }
+
+    function collision(player, enemy) {
+
+        const p = player.getBoundingClientRect();
+        const e = enemy.getBoundingClientRect();
+
+        return (
+            p.left < e.right &&
+            p.right > e.left &&
+            p.top < e.bottom &&
+            p.bottom > e.top
+        );
+    }
+
+    function update() {
+
+        if (!gameRunning) return;
+
+        // Movimento do jogador
+        if (keys["ArrowLeft"] || keys["a"]) {
+            playerX -= 7;
+        }
+
+        if (keys["ArrowRight"] || keys["d"]) {
+            playerX += 7;
+        }
+
+        // Limites da pista
+        if (playerX < 10) {
+            playerX = 10;
+        }
+
+        if (playerX > 340) {
+            playerX = 340;
+        }
+
+        player.style.left = playerX + "px";
+
+        // Movimento das linhas
+        lines.forEach(line => {
+
+            let top = parseInt(line.style.top);
+
+            top += speed;
+
+            if (top > 700) {
+                top = -80;
+            }
+
+            line.style.top = top + "px";
+        });
+
+        // Movimento dos inimigos
+        enemies.forEach((enemy, index) => {
+
+            let top = parseInt(enemy.style.top);
+
+            top += speed;
+
+            enemy.style.top = top + "px";
+
+            // Verificar colisão
+            if (collision(player, enemy)) {
+                endGame();
+            }
+
+            // Se passou do jogador
+            if (top > 700) {
+
+                enemy.remove();
+
+                enemies.splice(index, 1);
+
+                score++;
+
+                scoreText.innerText =
+                    "Pontos: " + score;
+
+                // Aumentar dificuldade
+                if (score % 5 === 0) {
+                    speed += 1;
+                }
+            }
+        });
+
+        requestAnimationFrame(update);
+    }
+
+    function endGame() {
+
+        gameRunning = false;
+
+        finalScore.innerText =
+            "Você fez " + score + " pontos!";
+
+        gameOverScreen.style.display = "flex";
+    }
+
+    function restartGame() {
+
+        enemies.forEach(enemy => enemy.remove());
+
+        enemies = [];
+
+        playerX = 175;
+        score = 0;
+        speed = 5;
+
+        player.style.left = playerX + "px";
+
+        scoreText.innerText = "Pontos: 0";
+
+        gameOverScreen.style.display = "none";
+
+        gameRunning = true;
+
+        update();
+    }
+
+    // Criar inimigos regularmente
+    setInterval(() => {
+
+        if (gameRunning) {
+            createEnemy();
+        }
+
+    }, 1200);
+
+    update();
+</script>
+
+</body>
 </html>
 
-Não omita absolutamente nenhuma parte.
-
-4. TESTE E REVISÃO
-
-Antes de entregar, revise o código procurando:
-
-erros de JavaScript;
-funções inexistentes;
-botões que não funcionam;
-menus quebrados;
-problemas no sistema de colisão;
-problemas no salvamento;
-problemas de progressão;
-problemas nas fases;
-problemas no mobile.
-
-Corrija os problemas encontrados antes de entregar.
-
-REGRA FINAL
-
-Eu quero poder simplesmente copiar o código inteiro que você fornecer, colocar em index.html no VS Code e abrir no navegador para jogar.
-
-Não me entregue uma versão de demonstração. Crie o jogo mais completo e polido que conseguir dentro das limitações de um único arquivo HTML.
