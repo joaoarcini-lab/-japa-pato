@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neymar</title>
+</head>
+<body>
+    <header>
+        <h1>HISTÓRIA nj</h1>
+        <p>A história de um dos melhores (se não o melhor) jogador do Brasil</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Contatos</a>
+        <a href="#">Patrocinadores</a>
+    </nav>
+</body>
+</html>
