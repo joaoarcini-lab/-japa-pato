@@ -17,9 +17,28 @@
     </nav>
     <main>
         <article>
-            <h1>
-                Neymar Jr, com mais de 450 gols e mais de 260 assistencias, esta facilmente no top 10 melhores jogadores do mundo.
-            </h1>
+            <h1>Carreira de Neymar</h1>
+            <p>Neymar da Silva Santos Júnior, conhecido mundialmente como <strong>Neymar</strong>, é um dos principais jogadores brasileiros de sua geração. Nascido em 5 de fevereiro de 1992, em Mogi das Cruzes, São Paulo, ele começou a se destacar ainda jovem no futebol e construiu uma carreira marcada por passagens por grandes clubes do Brasil e da Europa, além de uma longa trajetória pela <strong>Seleção Brasileira</strong>.</p> 
+            <h2>Início da carreira no Santos</h2> 
+            <p>Neymar iniciou sua trajetória profissional no <strong>Santos Futebol Clube</strong>, clube pelo qual estreou em 2009. Ainda muito jovem, passou a chamar atenção por sua habilidade, velocidade, dribles e capacidade de marcar gols. Durante suas primeiras temporadas, conquistou títulos importantes e se tornou uma das principais revelações do futebol brasileiro.</p> 
+            <p>Em 2010, Neymar conquistou o Campeonato Paulista e a Copa do Brasil com o Santos. No ano seguinte, teve um dos momentos mais importantes de sua passagem pelo clube ao conquistar a <strong>Copa Libertadores da América de 2011</strong>. Na competição, teve participação decisiva e marcou um dos gols da final contra o Peñarol, do Uruguai.</p>
+            <h2>Transferência para o Barcelona</h2>
+            <p>Em 2013, Neymar deixou o Santos e foi contratado pelo <strong>Barcelona</strong>, da Espanha. No clube catalão, passou a atuar ao lado de grandes jogadores, como Lionel Messi e Luis Suárez, formando um dos trios ofensivos mais conhecidos do futebol mundial, o chamado <strong>MSN</strong>.</p> 
+            <p>Durante sua passagem pelo Barcelona, Neymar conquistou diversos títulos. Entre os principais estão o Campeonato Espanhol, a Copa do Rei e a <strong>Liga dos Campeões da UEFA de 2014–15</strong>. Na final da competição contra a Juventus, Neymar marcou um dos gols da vitória por 3 a 1. Na mesma temporada, o Barcelona conquistou a tríplice coroa, vencendo o Campeonato Espanhol, a Copa do Rei e a Liga dos Campeões.</p>
+            <h2>Recorde de transferência para o Paris Saint-Germain</h2> 
+            <p>Em 2017, Neymar deixou o Barcelona e se transferiu para o <strong>Paris Saint-Germain (PSG)</strong>. A transferência chamou grande atenção no futebol mundial e foi realizada por uma multa rescisória de €222 milhões, valor que tornou Neymar, naquele momento, o jogador mais caro da história do futebol.</p> 
+            <p>Durante sua passagem pelo PSG, Neymar conquistou títulos nacionais, incluindo o Campeonato Francês e a Copa da França. O clube também chegou à final da Liga dos Campeões na temporada 2019–20, mas foi derrotado pelo Bayern de Munique.</p>                 <h2>Retorno ao futebol brasileiro</h2> 
+            <p>Em 2023, Neymar deixou o Paris Saint-Germain e foi contratado pelo <strong>Al-Hilal</strong>, da Arábia Saudita. Sua passagem pelo clube foi marcada por problemas físicos e poucas partidas disputadas. Em 2025, o jogador retornou ao <strong>Santos</strong>, clube onde iniciou sua carreira profissional.</p>
+            <p>O retorno ao Santos marcou uma nova etapa na carreira de Neymar. De volta ao futebol brasileiro, o jogador passou a vestir novamente a camisa que havia usado no início de sua trajetória e que o projetou internacionalmente.</p> 
+            <h2>Carreira na Seleção Brasileira</h2> 
+            <p>Neymar também construiu uma longa história com a <strong>Seleção Brasileira</strong>. Ele estreou pela equipe principal em 2010 e participou de diversas competições importantes, incluindo Copas do Mundo, Copas América e Jogos Olímpicos.</p>
+            <p>Um dos momentos mais marcantes aconteceu nos <strong>Jogos Olímpicos de 2016</strong>, realizados no Rio de Janeiro. Neymar foi o capitão da seleção brasileira na conquista da medalha de ouro olímpica no futebol masculino. Na final contra a Alemanha, marcou um gol e converteu a cobrança decisiva na disputa de pênaltis.</p> 
+            <h2>Principais características</h2>
+            <p>Ao longo de sua carreira, Neymar ficou conhecido principalmente por sua habilidade no um contra um, seus dribles, criatividade e capacidade de criar oportunidades para seus companheiros. Também se destacou como goleador e acumulou participações importantes por clubes e pela Seleção Brasileira.</p> 
+            <p>Sua carreira passou por diferentes fases e países, desde o início no Santos até as experiências no futebol espanhol, francês e saudita. Com isso, Neymar se tornou uma figura de destaque na história recente do futebol brasileiro.</p
+                <picture>
+                        <source media="(min-width:670px)" srcset="imagens/dan-droids.png">
+                        <img src="imagens/dan-droids-pq.png" alt="Primeiro mascote do android"></picture>
         </article>
     </main>
 </body>
