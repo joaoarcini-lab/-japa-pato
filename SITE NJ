@@ -35,11 +35,11 @@
             <p>Um dos momentos mais marcantes aconteceu nos <strong>Jogos Olímpicos de 2016</strong>, realizados no Rio de Janeiro. Neymar foi o capitão da seleção brasileira na conquista da medalha de ouro olímpica no futebol masculino. Na final contra a Alemanha, marcou um gol e converteu a cobrança decisiva na disputa de pênaltis.</p> 
             <h2>Principais características</h2>
             <p>Ao longo de sua carreira, Neymar ficou conhecido principalmente por sua habilidade no um contra um, seus dribles, criatividade e capacidade de criar oportunidades para seus companheiros. Também se destacou como goleador e acumulou participações importantes por clubes e pela Seleção Brasileira.</p> 
-            <p>Sua carreira passou por diferentes fases e países, desde o início no Santos até as experiências no futebol espanhol, francês e saudita. Com isso, Neymar se tornou uma figura de destaque na história recente do futebol brasileiro.</p
+            <p>Sua carreira passou por diferentes fases e países, desde o início no Santos até as experiências no futebol espanhol, francês e saudita. Com isso, Neymar se tornou uma figura de destaque na história recente do futebol brasileiro.</p>
                 <picture>
-                        <source media="(min-width:670px)" srcset="imagens/dan-droids.png">
-                        <img src="imagens/dan-droids-pq.png" alt="Primeiro mascote do android"></picture>
+                        <source media="(min-width:670px)" srcset="imagens/neymar.jpg" width="400px">
+                        <img src="imagens/neymar.jpg" width="200px" alt="Estreia do Neymar"></picture>
         </article>
     </main>
 </body>
-</html>
+</html>     
