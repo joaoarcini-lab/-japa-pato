@@ -37,9 +37,23 @@
             <p>Ao longo de sua carreira, Neymar ficou conhecido principalmente por sua habilidade no um contra um, seus dribles, criatividade e capacidade de criar oportunidades para seus companheiros. Também se destacou como goleador e acumulou participações importantes por clubes e pela Seleção Brasileira.</p> 
             <p>Sua carreira passou por diferentes fases e países, desde o início no Santos até as experiências no futebol espanhol, francês e saudita. Com isso, Neymar se tornou uma figura de destaque na história recente do futebol brasileiro.</p>
                 <picture>
-                        <source media="(min-width:670px)" srcset="imagens/neymar.jpg" width="400px">
-                        <img src="imagens/neymar.jpg" width="200px" alt="Estreia do Neymar"></picture>
+                        <source media="(min-width:670px)" srcset="imagens/68290-1692601435.webp" width="400px">
+                        <img src="imagens/68290-1692601435.webp" width="200px" alt="Estreia do Neymar"></picture>
         </article>
     </main>
+    <aside>
+        <h3>CURIOSIDADE</h3>
+        <p>Fã de Counter-Strike: Fora dos gramados, ele é um grande fã de esportes eletrônicos e passa centenas de horas jogando CS:GO / Counter-Strike sob o apelido de "BaTmAn*LoKo".</p>
+    <ul>
+        <li>Quase no Real Madrid: Aos 14 anos, Neymar viajou para a Espanha e passou em testes para jogar nas categorias de base do Real Madrid, mas o pai dele decidiu que era cedo demais para sair do Brasil e cancelou a transferência.</li>
+        <li>Quase não chamou Neymar: O pai dele planejava registrá-lo como Mateus, mas mudou de ideia na hora e escolheu Neymar.</li>
+    </ul>
+    </aside>
 </body>
+</html>     
+
+
+
+
+
 </html>     
